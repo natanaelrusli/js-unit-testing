@@ -1,12 +1,4 @@
-function filterByTerm(inputArr, searchTerm) {
-    if (searchTerm === '' || null || undefined) {
-       return [] 
-    }
-    const regex = new RegExp(searchTerm, "i") // case insensitive matching
-    return inputArr.filter(function(arrayElement) {
-        return arrayElement.url.match(regex)
-    })
-}
+import filterByTerm from "../src/filterByTerm"
 
 const input = [
     { id: 1, url: 'https://www.url1.dev' },
