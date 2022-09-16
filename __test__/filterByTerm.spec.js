@@ -17,5 +17,6 @@ describe('Filter function', () => {
         ]
 
         expect(filterByTerm(input, 'link')).toEqual(output)
+        expect(filterByTerm(input, 'Link')).toEqual(output)
     })
 })
