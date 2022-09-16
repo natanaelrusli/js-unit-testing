@@ -30,5 +30,12 @@ describe('Filter function', () => {
         expect(filterByTerm(input, 'uRl')).toEqual(expected)
         expect(filterByTerm(input, 'URL')).toEqual(expected)
         expect(filterByTerm(input, 'url')).toEqual(expected)
+    }),
+
+    test('it should not return anything with an empty search term', () => {
+        const expected = []
+
+        expect(filterByTerm(input, '')).toEqual(expected)
+        expect(filterByTerm(input, null)).toEqual(expected)
     })
 })
