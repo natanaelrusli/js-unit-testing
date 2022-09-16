@@ -1,6 +1,6 @@
 function filterByTerm(inputArr, searchTerm) {
-    if (searchTerm === '' || null || undefined) {
-       return [] 
+    if (searchTerm === '' || !searchTerm) {
+       throw new Error('search term should not be empty')
     }
     const regex = new RegExp(searchTerm, "i") // case insensitive matching
     return inputArr.filter(function(arrayElement) {
