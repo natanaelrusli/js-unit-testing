@@ -28,9 +28,14 @@ describe('Filter function', () => {
     }),
 
     test('it should not return anything with an empty search term', () => {
-        const expected = []
+        const expectedError = 'search term should not be empty'
 
-        expect(filterByTerm(input, '')).toEqual(expected)
-        expect(filterByTerm(input, null)).toEqual(expected)
+        expect(() => {
+            filterByTerm(input, null)
+        }).toThrow(expectedError)
+
+        expect(() => {
+            filterByTerm(input, '')
+        }).toThrow(expectedError)
     })
 })
