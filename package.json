@@ -12,7 +12,8 @@
       "^.+\\.[t|j]sx?$": "babel-jest"
     },
     "verbose": true,
-    "collectCoverage": true
+    "collectCoverage": true,
+    "coverageReporters": ["html"]
   },
   "keywords": [],
   "author": "Nata Nael",
